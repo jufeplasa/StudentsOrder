@@ -3,6 +3,7 @@ package ui;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Main {
@@ -95,7 +96,8 @@ public class Main {
 	}
 
 	public static void printArray(double[] orderYears, double average) {
-		System.out.print(average+"-");
+		DecimalFormat formato = new DecimalFormat("#.##");
+		System.out.print(formato.format(average)+" - ");
 		for(int i=0;i<(orderYears.length);i++) {
 			System.out.print(orderYears[i]+" ");
 		}
